@@ -1,0 +1,272 @@
+/********************
+        reset
+********************/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: "Montserrat", serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+img{
+    width: 100%;
+}
+
+/*********************
+        main app
+*********************/
+
+.corpo{
+    height: calc(100% - 90px);
+    display: flex;
+}
+
+.corpo .coll-sinistra{
+    background-color: #000;
+    padding-top: 10px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* corpo di sinistra */
+
+.corpo .coll-sinistra #logo{
+    padding: 0 10px;
+}
+
+.corpo .coll-sinistra #lista-icone{
+    display: flex;
+}
+
+/* logo */
+
+.coll-sinistra,
+.logo-small,
+.icone{
+    max-width: 60px;
+}
+
+.coll-sinistra .logo-small{
+    padding-bottom: 20px;
+}
+
+.logo-big{
+    display: none;
+}
+
+/* logo */
+
+/* padding elementi colonna sinistra */
+
+.corpo .coll-sinistra #lista-icone{
+    margin-bottom: 30px;
+}
+
+.corpo .coll-sinistra #lista-icone li {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+}
+
+.corpo .coll-sinistra #container-profilo{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: auto;
+}
+
+.corpo .coll-sinistra #playlist{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container-download{
+    margin-right: 5px;
+}
+
+/* padding elementi colonna sinistra */
+
+/* parte centrale colonna sinistra */
+
+.corpo .coll-sinistra #lista-icone li:hover {
+    border-left: 2px solid chartreuse ;
+}
+
+.menu{
+    display: none;
+    line-height: 2.5;
+    opacity: 0.5;
+}
+
+h2{
+    color: #fff;
+    font-size: 25px;
+    display: none;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+
+.container-crea{
+    display: flex;
+    display: none;
+    padding-bottom: 50px;
+    align-items: center;
+}
+
+.container-plus{
+    background-color: #666;
+    padding: 15px;
+    margin-right: 10px;
+}
+
+.fa-plus{
+    color: #000;
+    font-size: 20px;
+}
+
+.profilo{
+    display: flex;
+    padding: 17px 0;
+}
+
+.icone{
+    opacity: 0.5;
+}
+
+.foto-profilo{
+    background-color: gray;
+    border-radius: 50%;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.nome-profilo{
+    margin-left: 10px;
+    color: #fff;
+    display: none;
+}
+
+/* parte centrale colonna sinistra */
+
+/** colonna destra **/
+
+.corpo .coll-destra{
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.coll-destra header{
+    height: 90px;
+    background-color: #10131a;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    opacity: 0.6;
+}
+
+.coll-destra main{
+    background-color: #151922;
+    height: 100%;
+}
+
+/* header */
+
+
+
+
+
+/*********************
+        footer
+*********************/
+
+footer{
+    height: 90px;
+    background-color: #282828;
+}
+
+/*********************
+       responsive
+*********************/
+
+@media screen and (min-width: 992px){
+
+    /* colonna sinistra*/
+
+    .corpo .coll-sinistra{
+        max-width: 230px;
+    }
+
+    .coll-destra header{
+        height: 90px;
+        background-color: #10131a
+    }
+
+    footer{
+        height: 175px;
+        background-color: #282828;
+    }
+
+    .coll-destra main{
+        background-color: #151922;
+    }
+
+    .corpo .coll-sinistra #lista-icone {
+        margin-top: 30px;
+    }
+
+    .logo-big{
+        display: inline;
+        padding-bottom: 20px;
+        width: 130px;
+    }
+
+    .logo-small{
+        display: none;
+    }
+
+    .icone{
+        max-width: 40px;
+    }
+
+    .menu{
+        display: inline;
+        font-size: 20px;
+        color: #fff;
+    }
+    h2{
+        display: inline-block;
+    }
+
+    .profilo{
+        border-top: 2px solid #fff;
+        display: flex;
+        align-items: center;
+    }
+
+    .nome-profilo{
+        display: inline;
+    }
+
+    .container-crea{
+        display: flex;
+    }
+
+    /* colonna sinistra*/
+}
