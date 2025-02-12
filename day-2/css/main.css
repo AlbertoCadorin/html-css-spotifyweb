@@ -206,6 +206,28 @@ h2{
     color: #fff;
 }
 
+main #menu-main{
+    padding: 120px 10px 20px;
+}
+
+main #menu-main .lista-tendenze{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+main #menu-main  a{
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+
+main #menu-main a:hover {
+    border-bottom: 2px solid chartreuse;
+}
 
 
 /*********************
