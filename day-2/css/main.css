@@ -169,6 +169,7 @@ h2{
 .corpo .coll-destra{
     flex-grow: 1;
     overflow-y: scroll;
+    max-width: calc(100% - 60px);
 }
 
 .coll-destra header{
@@ -177,18 +178,33 @@ h2{
     position: fixed;
     top: 0;
     z-index: 2;
-    width: 100%;
+    width: calc(100% - 60px);
     opacity: 0.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .coll-destra main{
     background-color: #151922;
-    height: 100%;
 }
 
 /* header */
 
+.coll-destra header #bottone{
+    
+    margin-left: auto;
+    margin-right: 28px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
 
+.coll-destra header #bottone a{
+    color: #fff;
+}
 
 
 
@@ -209,12 +225,13 @@ footer{
 
     /* colonna sinistra*/
 
-    .corpo .coll-sinistra{
+    .coll-sinistra{
         max-width: 230px;
     }
 
     .coll-destra header{
         height: 90px;
+        width: calc(100% - 200px);
         background-color: #10131a
     }
 
