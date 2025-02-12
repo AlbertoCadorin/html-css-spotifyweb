@@ -131,7 +131,7 @@ h2{
 
 .container-plus{
     background-color: #666;
-    padding: 15px;
+    padding: 10px;
     margin-right: 10px;
 }
 
@@ -192,22 +192,26 @@ h2{
 
 /* header */
 
-.coll-destra header #bottone{
-    
+ #bottone{
+    margin-right: 20px;
     margin-left: auto;
-    margin-right: 28px;
     padding: 10px 20px;
     border: 2px solid white;
     border-radius: 20px;
     text-transform: uppercase;
+    
 }
 
-.coll-destra header #bottone a{
+ #bottone a{
     color: #fff;
+    font-size: 11px;
 }
+
 
 main #menu-main{
     padding: 120px 10px 20px;
+    display: flex;
+    justify-content: center;
 }
 
 main #menu-main .lista-tendenze{
@@ -243,27 +247,9 @@ footer{
        responsive
 *********************/
 
-@media screen and (min-width: 992px){
-
-    /* colonna sinistra*/
-
+@media screen and (min-width: 576px){
     .coll-sinistra{
         max-width: 230px;
-    }
-
-    .coll-destra header{
-        height: 90px;
-        width: calc(100% - 200px);
-        background-color: #10131a
-    }
-
-    footer{
-        height: 175px;
-        background-color: #282828;
-    }
-
-    .coll-destra main{
-        background-color: #151922;
     }
 
     .corpo .coll-sinistra #lista-icone {
@@ -281,12 +267,12 @@ footer{
     }
 
     .icone{
-        max-width: 40px;
+        max-width: 30px;
     }
 
     .menu{
         display: inline;
-        font-size: 20px;
+        font-size: 14px;
         color: #fff;
     }
     h2{
@@ -307,5 +293,40 @@ footer{
         display: flex;
     }
 
+    /* colonna destra */
+    .coll-destra header{
+        height: 90px;
+        width: calc(100% - 200px);
+        background-color: #10131a
+    }
+
+    main #menu-main .lista-tendenze{
+        width: calc(150% / 2);
+        justify-content: center;
+    }
+    
+}
+
+@media screen and (min-width: 768px){
+    main #menu-main .lista-tendenze{
+        width: calc(160% / 2);
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 992px){
+
+    /* colonna sinistra*/
+
+    .coll-sinistra{
+        max-width: 230px;
+    }
+
+    
+
     /* colonna sinistra*/
 }
+
+
+
+
