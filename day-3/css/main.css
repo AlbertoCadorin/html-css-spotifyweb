@@ -342,6 +342,46 @@ footer{
     background-color: #282828;
 }
 
+.container-foot{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foot-sinistra{
+    display: flex;
+    align-items: center;
+}
+
+.foot-sinistra .nome-art-brano li{
+    padding-right: 10px;
+    font-size: 11px;
+    color: #666;
+}
+
+.foot-sinistra .nome-art-brano .foot-titolo{
+    color: #fff;
+    font-size: 11px;
+    padding-right: 10px;
+}
+
+.fa-heart,
+.fa-folder{
+    color: #fff;
+    line-height: 2;
+}
+
+.foot-sinistra .cuore-cartella{
+    font-size: 11px;
+}
+
+.container-foot .icona-brano{
+    max-width: 50px;
+    padding: 10px;
+}
+
 /*********************
        responsive
 *********************/
