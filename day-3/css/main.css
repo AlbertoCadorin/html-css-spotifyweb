@@ -105,7 +105,7 @@ img{
 /* parte centrale colonna sinistra */
 
 .corpo .coll-sinistra #lista-icone .home {
-    border-left: 2px solid chartreuse ;
+    border-left: 2px solid #adff2f ;
 }
 
 .menu{
@@ -145,7 +145,7 @@ h2{
     padding: 17px 0;
 }
 
-.icone{
+.gruppo{
     opacity: 0.5;
 }
 
@@ -198,14 +198,14 @@ h2{
 
  #bottone{
     padding: 10px 20px;
-    border: 2px solid white;
+    border: 2px solid #666;
     border-radius: 20px;
     text-transform: uppercase;
     
 }
 
  #bottone a{
-    color: #fff;
+    color: #666;
     font-size: 11px;
 }
 
@@ -225,12 +225,11 @@ main #menu-main .lista-tendenze{
 }
 
 main #menu-main  a{
-    color: #fff;
+    color: #7d7f84;
     font-size: 10px;
     text-transform: uppercase;
     margin-bottom: 30px;
 }
-
 
 main #menu-main a {
     display: flex;
@@ -240,7 +239,7 @@ main #menu-main a {
 main #menu-main .evidenzia:after {
     content: "";
     height: 4px;
-    background-color: chartreuse;
+    background-color: #adff2f;
     display: block;
     width: 30px;
 }
@@ -333,6 +332,27 @@ h4{
     color: #fff;
 }
 
+main #menu-main  a:hover{
+    color: #fff;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.gruppo:hover{
+    opacity: 2;
+}
+
+#bottone:hover {
+    border: 2px solid white;
+    font-size: 15px;
+}
+#bottone a:hover{
+    color: #fff;
+    font-size: 15px;
+}
+
 /*********************
         footer
 *********************/
@@ -398,6 +418,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+    align-items: center;
 }
 
 .container-foot .container-controlli .controlli-top i{
@@ -469,6 +490,19 @@ footer{
     border-radius: 2px;
 }
 
+/***********************/
+
+.container-foot .container-controlli .controlli-top .fa-circle-play:hover {
+    font-size: 20px;
+}
+
+.container-foot .container-controlli .controlli-bott .barra-front:hover {
+    background-color: #adff2f;
+}
+
+.container-foot .container-volumi .barra-front-volume:hover{
+    background-color: #adff2f;
+}
 
 /*********************
        responsive
@@ -541,6 +575,15 @@ footer{
     h4{
         font-size: 15px;
     }
+
+    .nome-art-brano ul {
+        display: flex;
+    }
+
+    .cuore-cartella ul {
+        display: flex;
+        gap: 10px;
+    }
 }
 /****************** deckstop ********************/
 @media screen and (min-width: 992px){
@@ -580,7 +623,7 @@ footer{
     #artisti-piu-popolari{
         padding: 0px 30px 30px;
     }
-    /* colonna sinistra*/
+    /* colonna destra */
 
      .container-album li {
         width: calc((100% - 100px) / 6);
@@ -594,6 +637,29 @@ footer{
     #playlist-recenti .container-album li .titolo-album div{
         text-align: center;
         font-size: 17px;
+    }
+
+    .container-foot .container-controlli .controlli-top i {
+        font-size: 18px;
+        
+    }
+    .container-foot .container-controlli .controlli-top .fa-circle-play {
+        font-size: 25px;
+    }
+    .container-foot .container-controlli .controlli-top {
+        gap: 25px;
+        align-items: center;
+    }
+
+    .container-foot .container-controlli .controlli-bott .barra-sfondo {
+        width: 350px;
+        background-color: #666;
+        border-radius: 2px;
+        margin: 0 10px;
+    }
+
+    .container-foot .container-controlli .controlli-top .fa-circle-play:hover {
+        font-size: 30px;
     }
 }
 
