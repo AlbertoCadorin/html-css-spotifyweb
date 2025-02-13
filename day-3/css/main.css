@@ -1,0 +1,442 @@
+/********************
+        reset
+********************/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: "Montserrat", serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+img{
+    width: 100%;
+}
+
+/*********************
+        main app
+*********************/
+
+.corpo{
+    height: calc(100% - 90px);
+    display: flex;
+}
+
+.corpo .coll-sinistra{
+    background-color: #000;
+    padding-top: 20px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* corpo di sinistra */
+
+.corpo .coll-sinistra #logo{
+    padding: 0 10px;
+}
+
+.corpo .coll-sinistra #lista-icone{
+    display: flex;
+}
+
+/* logo */
+
+.coll-sinistra,
+.logo-small,
+.icone{
+    max-width: 50px;
+}
+
+.coll-sinistra .logo-small{
+    padding-bottom: 20px;
+}
+
+.logo-big{
+    display: none;
+}
+
+/* logo */
+
+/* padding elementi colonna sinistra */
+
+.corpo .coll-sinistra #lista-icone{
+    margin-bottom: 30px;
+}
+
+.corpo .coll-sinistra #lista-icone li {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+}
+
+.corpo .coll-sinistra #container-profilo{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: auto;
+}
+
+.corpo .coll-sinistra #playlist{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container-download{
+    margin-right: 5px;
+}
+
+/* padding elementi colonna sinistra */
+
+/* parte centrale colonna sinistra */
+
+.corpo .coll-sinistra #lista-icone .home {
+    border-left: 2px solid chartreuse ;
+}
+
+.menu{
+    display: none;
+    line-height: 2.5;
+    opacity: 0.5;
+}
+
+h2{
+    color: #fff;
+    font-size: 25px;
+    display: none;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+
+.container-crea{
+    display: flex;
+    display: none;
+    padding-bottom: 50px;
+    align-items: center;
+}
+
+.container-plus{
+    background-color: #666;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.fa-plus{
+    color: #000;
+    font-size: 20px;
+}
+
+.profilo{
+    display: flex;
+    padding: 17px 0;
+}
+
+.icone{
+    opacity: 0.5;
+}
+
+.foto-profilo{
+    background-color: gray;
+    border-radius: 50%;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.nome-profilo{
+    margin-left: 10px;
+    color: #fff;
+    display: none;
+}
+
+/* parte centrale colonna sinistra */
+
+/** colonna destra **/
+
+.corpo .coll-destra{
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: #151922;
+}
+
+.coll-destra header{
+    background-color: rgb(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: end;
+    padding: 30px;
+}
+
+.coll-destra main{
+    background-color: #151922;
+}
+
+/* header */
+
+ #bottone{
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+    text-transform: uppercase;
+    
+}
+
+ #bottone a{
+    color: #fff;
+    font-size: 11px;
+}
+
+/* main */
+
+main #menu-main{
+    padding: 30px 10px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+main #menu-main .lista-tendenze{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+main #menu-main  a{
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+
+main #menu-main a {
+    display: flex;
+    flex-direction: column;
+}
+
+main #menu-main .evidenzia:after {
+    content: "";
+    height: 4px;
+    background-color: chartreuse;
+    display: block;
+    width: 30px;
+}
+
+/* album */
+
+#playlist-recenti{
+    padding: 0px 10px 30px;
+}
+
+
+ .container-album{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+ .container-album li{
+    width: calc((100% - 40px) / 2);
+    flex-shrink: 0;
+}
+
+ .container-album li .titolo-album{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 10px;
+}
+h3{
+    color: #fff;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+#playlist-recenti .container-album li .titolo-album div{
+    text-align: center;
+}
+
+.sub{
+    color: #666;
+}
+
+/* creato per alberto */
+
+#playlist-create-per-me{
+    padding: 0px 10px 30px;
+}
+
+p{
+    font-size: 13px;
+    color: #7d7f84;
+}
+
+h4{
+    font-size: 13px;
+    color: #7d7f84;
+    padding-bottom: 20px;
+}
+/* artisti */
+#artisti-piu-popolari{
+    padding: 0px 10px 30px;
+}
+
+#artisti-piu-popolari img{
+    border: 2px solid #282828;
+    border-radius: 50%;
+}
+
+/*********************
+        footer
+*********************/
+
+footer{
+    height: 90px;
+    background-color: #282828;
+}
+
+/*********************
+       responsive
+*********************/
+
+/************* mobile ****************/
+
+@media screen and (min-width: 576px){
+    .coll-sinistra{
+        max-width: 230px;
+    }
+
+    .corpo .coll-sinistra #lista-icone {
+        margin-top: 30px;
+    }
+
+    .logo-big{
+        display: inline;
+        padding-bottom: 20px;
+        width: 130px;
+    }
+
+    .logo-small{
+        display: none;
+    }
+
+    .icone{
+        max-width: 30px;
+    }
+
+    .menu{
+        display: inline;
+        font-size: 14px;
+        color: #fff;
+    }
+    h2{
+        display: inline-block;
+    }
+
+    .profilo{
+        border-top: 2px solid #fff;
+        display: flex;
+        align-items: center;
+    }
+
+    .nome-profilo{
+        display: inline;
+    }
+
+    .container-crea{
+        display: flex;
+    }
+
+    /* colonna destra */
+    
+    
+}
+/************* tablet **************/
+
+@media screen and (min-width: 768px){
+    
+    main #menu-main a {
+        font-size: 16px;
+    }
+     .container-album li {
+        width: calc((100% - 60px) / 4);
+        flex-shrink: 0;
+    }
+
+    h4{
+        font-size: 15px;
+    }
+}
+/****************** deckstop ********************/
+@media screen and (min-width: 992px){
+
+    /* colonna sinistra*/
+
+    .coll-sinistra{
+        max-width: 230px;
+    }
+
+
+    #bottone a {
+        
+        font-size: 15px;
+    }
+
+     .container-album li {
+        width: 250px;
+    }
+
+    h3{
+        font-size: 20px;
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    #playlist-recenti {
+        padding: 0px 30px 30px;
+    }
+
+    #playlist-create-per-me{
+        padding: 0px 30px 30px;
+    }
+
+    #artisti-piu-popolari{
+        padding: 0px 30px 30px;
+    }
+    /* colonna sinistra*/
+
+     .container-album li {
+        width: calc((100% - 100px) / 6);
+        flex-shrink: 0;
+    }
+
+    .container-album li .titolo-album{
+        gap: 20px;
+    }
+
+    #playlist-recenti .container-album li .titolo-album div{
+        text-align: center;
+        font-size: 17px;
+    }
+}
+
+
+
+
