@@ -26,7 +26,7 @@
             <div id="lista-icone">
                 <!-- lista icone principali -->
                 <ul class="lista">
-                    <li>
+                    <li class="home">
                         <a href="#">
                             <img src="img/home.svg" alt="home spotify" class="icone">
                             <span class="menu">Home</span>
@@ -52,8 +52,10 @@
                 <h2><strong>playlist</strong></h2>
                  <!-- /titolo playlist -->
                 <div class="container-crea">
-                    <div class="container-plus"><i class="fa-solid fa-plus"></i></div>
-                     <p class="menu">Crea Playlist</p>
+                    <a href="#">
+                        <div class="container-plus"><i class="fa-solid fa-plus"></i></div>
+                        <p class="menu">Crea Playlist</p>
+                    </a> 
                  </div>
                 <!-- elenco playlist -->
                 <ul>
@@ -114,7 +116,7 @@
                 <!-- menu main -->
                 <section id="menu-main">
                     <ul class="lista-tendenze">
-                        <li><a href="#">in evidenza</a></li>
+                        <li><a href="#" class="evidenzia">in evidenza</a></li>
                         <li><a href="#">podcast</a></li>
                         <li><a href="#">classifiche</a></li>
                         <li><a href="#">generi e mood</a></li>
@@ -132,36 +134,42 @@
                             <a href="#" class="titolo-album">
                                 <img src="img/metal_lifting.jpg" alt="mix metal">
                                 <div>Heavy Metal</div>
+                                <div class="sub">Subtitle</div>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="titolo-album">
                                 <img src="img/stranger.jpeg" alt="stranger">
                                 <div>Stranger Things Vol.1 (a Netflix Original Series Soundtrack)</div>
+                                <div class="sub">Subtitle</div>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="titolo-album">
                                 <img src="img/aquietplace.jpeg" alt="a quiet place">
                                 <div>A quiet place</div>
+                                <div class="sub">Subtitle</div>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="titolo-album">
                                 <img src="img/split.jpeg" alt="split">
                                 <div>Split</div>
+                                <div class="sub">Subtitle</div>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="titolo-album">
                                 <img src="img/sinister.jpeg" alt="sinister">
                                 <div>A cure for wellness</div>
+                                <div class="sub">Subtitle</div>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="titolo-album">
                                 <img src="img/cure.jpeg" alt="cure">
                                 <div>Sinister</div>
+                                <div class="sub">Subtitle</div>
                             </a>
                         </li>
                     </ul>
@@ -169,9 +177,9 @@
                 <!-- /playlist recenti -->
 
                 <!-- creato per Alberto Cadorin -->
-                <section id="playlist-recenti">
+                <section id="playlist-create-per-me">
                     <h3>Creato per Alberto Cadorin</h3>
-                    <p>Più ascolti più saranno accurati i suggerimenti</p>
+                    <h4>Più ascolti più saranno accurati i suggerimenti</h4>
                     <ul class="container-album">
                         <li>
                             <a href="#" class="titolo-album">
@@ -190,20 +198,20 @@
                 <!-- /creato per Alberto Cadorin -->
 
                 <!-- artisti più popolari -->
-                <section id="playlist-recenti">
+                <section id="artisti-piu-popolari">
                     <h3>Artisti più popolari</h3>
-                    <p>Più ascolti più saranno accurati i suggerimenti</p>
+                    <h4>Più ascolti più saranno accurati i suggerimenti</h4>
                     <ul class="container-album">
-                        <li>
-                            <a href="#" class="titolo-album artisti">
+                        <li class="artisti">
+                            <a href="#" class="titolo-album">
                                 <img src="img/youg.jpeg" alt="youg">
-                                <div></div>
+                                <div>Lana del Rey</div>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" class="titolo-album">
                                 <img src="img/einaudi.jpeg" alt="einaudi">
-                                <div></div>
+                                <div>Ludovico Einaudi</div>
                             </a>
                         </li>
                     </ul>

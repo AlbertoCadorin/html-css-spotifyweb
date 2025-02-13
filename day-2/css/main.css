@@ -38,7 +38,7 @@ img{
 
 .corpo .coll-sinistra{
     background-color: #000;
-    padding-top: 10px;
+    padding-top: 20px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -60,7 +60,7 @@ img{
 .coll-sinistra,
 .logo-small,
 .icone{
-    max-width: 60px;
+    max-width: 50px;
 }
 
 .coll-sinistra .logo-small{
@@ -104,7 +104,7 @@ img{
 
 /* parte centrale colonna sinistra */
 
-.corpo .coll-sinistra #lista-icone li:hover {
+.corpo .coll-sinistra #lista-icone .home {
     border-left: 2px solid chartreuse ;
 }
 
@@ -168,21 +168,18 @@ h2{
 
 .corpo .coll-destra{
     flex-grow: 1;
-    overflow-y: scroll;
+    overflow-y: auto;
+    background-color: #151922;
 }
 
 .coll-destra header{
-    height: 90px;
-    background-color: #10131a;
-    position: fixed;
+    background-color: rgb(0, 0, 0, 0.5);
+    position: sticky;
     top: 0;
-    z-index: 2;
-    width: calc(100% - 60px);
-    opacity: 0.6;
+    left: 0;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: end;
+    padding: 30px;
 }
 
 .coll-destra main{
@@ -192,8 +189,6 @@ h2{
 /* header */
 
  #bottone{
-    margin-right: 20px;
-    margin-left: auto;
     padding: 10px 20px;
     border: 2px solid white;
     border-radius: 20px;
@@ -209,7 +204,7 @@ h2{
 /* main */
 
 main #menu-main{
-    padding: 120px 10px 0px;
+    padding: 30px 10px 0px;
     display: flex;
     justify-content: center;
 }
@@ -229,29 +224,38 @@ main #menu-main  a{
 }
 
 
-main #menu-main a:hover {
-    border-bottom: 2px solid chartreuse;
+main #menu-main a {
+    display: flex;
+    flex-direction: column;
+}
+
+main #menu-main .evidenzia:after {
+    content: "";
+    height: 4px;
+    background-color: chartreuse;
+    display: block;
+    width: 30px;
 }
 
 /* album */
 
 #playlist-recenti{
-    
     padding: 0px 10px 30px;
 }
 
 
-#playlist-recenti .container-album{
+ .container-album{
     display: flex;
-    gap: 40px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
-#playlist-recenti .container-album li{
-    width: 150px;
+ .container-album li{
+    width: calc((100% - 40px) / 2);
+    flex-shrink: 0;
 }
 
-#playlist-recenti .container-album li .titolo-album{
+ .container-album li .titolo-album{
     display: flex;
     flex-direction: column;
     color: white;
@@ -267,16 +271,34 @@ h3{
     text-align: center;
 }
 
+.sub{
+    color: #666;
+}
+
 /* creato per alberto */
+
+#playlist-create-per-me{
+    padding: 0px 10px 30px;
+}
 
 p{
     font-size: 13px;
     color: #7d7f84;
-    padding-bottom: 20px;
 }
 
-.artisti{
-    
+h4{
+    font-size: 13px;
+    color: #7d7f84;
+    padding-bottom: 20px;
+}
+/* artisti */
+#artisti-piu-popolari{
+    padding: 0px 10px 30px;
+}
+
+#artisti-piu-popolari img{
+    border: 2px solid #282828;
+    border-radius: 50%;
 }
 
 /*********************
@@ -341,28 +363,23 @@ footer{
     }
 
     /* colonna destra */
-    .coll-destra header{
-        height: 90px;
-        width: calc(100% - 200px);
-        background-color: #10131a
-    }
-
-    main #menu-main .lista-tendenze{
-        width: calc(150% / 2);
-        justify-content: center;
-    }
+    
     
 }
 /************* tablet **************/
 
 @media screen and (min-width: 768px){
-    main #menu-main .lista-tendenze{
-        width: calc(200% / 2);
-        justify-content: center;
+    
+    main #menu-main a {
+        font-size: 16px;
+    }
+     .container-album li {
+        width: calc((100% - 60px) / 4);
+        flex-shrink: 0;
     }
 
-    main #menu-main a {
-        font-size: 13px;
+    h4{
+        font-size: 15px;
     }
 }
 /****************** deckstop ********************/
@@ -374,16 +391,13 @@ footer{
         max-width: 230px;
     }
 
-    main #menu-main a {
-        font-size: 17px;
-    }
 
     #bottone a {
         
         font-size: 15px;
     }
 
-    #playlist-recenti .container-album li {
+     .container-album li {
         width: 250px;
     }
 
@@ -394,7 +408,33 @@ footer{
     p{
         font-size: 16px;
     }
+
+    #playlist-recenti {
+        padding: 0px 30px 30px;
+    }
+
+    #playlist-create-per-me{
+        padding: 0px 30px 30px;
+    }
+
+    #artisti-piu-popolari{
+        padding: 0px 30px 30px;
+    }
     /* colonna sinistra*/
+
+     .container-album li {
+        width: calc((100% - 100px) / 6);
+        flex-shrink: 0;
+    }
+
+    .container-album li .titolo-album{
+        gap: 20px;
+    }
+
+    #playlist-recenti .container-album li .titolo-album div{
+        text-align: center;
+        font-size: 17px;
+    }
 }
 
 
