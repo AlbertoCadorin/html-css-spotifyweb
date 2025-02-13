@@ -164,7 +164,15 @@ h2{
 
 /* parte centrale colonna sinistra */
 
-/** colonna destra **/
+/*hover*/
+
+.corpo .coll-sinistra li:hover{
+    color: #fff;
+}
+
+/******************************
+        colonna destra 
+*******************************/
 
 .corpo .coll-destra{
     flex-grow: 1;
@@ -260,6 +268,7 @@ main #menu-main .evidenzia:after {
     flex-direction: column;
     color: white;
     gap: 10px;
+    position: relative;
 }
 h3{
     color: #fff;
@@ -273,6 +282,16 @@ h3{
 
 .sub{
     color: #666;
+}
+
+.container-album li .titolo-album .album-hover{
+    background-color: rgb(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
 }
 
 /* creato per alberto */
@@ -299,6 +318,19 @@ h4{
 #artisti-piu-popolari img{
     border: 2px solid #282828;
     border-radius: 50%;
+}
+
+/********************
+       hover
+********************/
+.fa-circle-play{
+    font-size: 50px;
+}
+.container-album li .titolo-album:hover .album-hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
 }
 
 /*********************
