@@ -25,6 +25,7 @@ a{
 
 img{
     width: 100%;
+    display: block;
 }
 
 /*********************
@@ -164,7 +165,6 @@ h2{
 
 /* parte centrale colonna sinistra */
 
-/*hover*/
 
 .corpo .coll-sinistra li:hover{
     color: #fff;
@@ -185,6 +185,7 @@ h2{
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 2;
     display: flex;
     justify-content: end;
     padding: 30px;
@@ -201,13 +202,10 @@ h2{
     border: 2px solid #666;
     border-radius: 20px;
     text-transform: uppercase;
-    
-}
-
- #bottone a{
-    color: #666;
+    color: #666; 
     font-size: 11px;
 }
+
 
 /* main */
 
@@ -319,46 +317,13 @@ h4{
     border-radius: 50%;
 }
 
-/********************
-       hover
-********************/
-.fa-circle-play{
-    font-size: 50px;
-}
-.container-album li .titolo-album:hover .album-hover{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-}
 
-main #menu-main  a:hover{
-    color: #fff;
-}
-
-a:hover {
-    color: #fff;
-}
-
-.gruppo:hover{
-    opacity: 2;
-}
-
-#bottone:hover {
-    border: 2px solid white;
-    font-size: 15px;
-}
-#bottone a:hover{
-    color: #fff;
-    font-size: 15px;
-}
 
 /*********************
         footer
 *********************/
 
 footer{
-    height: 90px;
     padding: 20px 0;
     background-color: #282828;
 }
@@ -394,8 +359,9 @@ footer{
     line-height: 2;
 }
 
-.foot-sinistra .cuore-cartella{
-    font-size: 11px;
+.foot-sinistra .cuore-cartella i{
+    font-size: 13px;
+    color: #666;
 }
 
 .container-foot .icona-brano{
@@ -490,7 +456,36 @@ footer{
     border-radius: 2px;
 }
 
-/***********************/
+/********************
+       hover
+********************/
+.fa-circle-play{
+    font-size: 50px;
+}
+.container-album li .titolo-album:hover .album-hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+main #menu-main  a:hover{
+    color: #fff;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.gruppo:hover{
+    opacity: 2;
+}
+
+#bottone:hover {
+    border: 2px solid #fff;
+    font-size: 15px;
+    color: #fff;
+}
 
 .container-foot .container-controlli .controlli-top .fa-circle-play:hover {
     font-size: 20px;
@@ -502,6 +497,20 @@ footer{
 
 .container-foot .container-volumi .barra-front-volume:hover{
     background-color: #adff2f;
+}
+
+.foot-sinistra .cuore-cartella i:hover {
+    font-size: 13px;
+    color: #fff;
+}
+
+.foot-sinistra .nome-art-brano li:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+.corpo .coll-sinistra li:hover{
+    color: #fff;
 }
 
 /*********************
@@ -584,6 +593,12 @@ footer{
         display: flex;
         gap: 10px;
     }
+    .container-foot .container-controlli .controlli-top {
+        gap: 19px;
+    }
+    .container-foot .container-controlli .controlli-bott .barra-sfondo {
+        width: 200px;
+    }
 }
 /****************** deckstop ********************/
 @media screen and (min-width: 992px){
@@ -661,8 +676,9 @@ footer{
     .container-foot .container-controlli .controlli-top .fa-circle-play:hover {
         font-size: 30px;
     }
+
+    #bottone:hover {
+        border: 2px solid white;
+        font-size: 17px;
+    }
 }
-
-
-
-
